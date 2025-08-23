@@ -14,6 +14,9 @@ public class FactoryMethodPattern
         factory = (LoggerFactory) XMLUtil.getBean();
         logger = factory.createLogger();
         logger.writeLog();
+        //直接使用工厂对象来调用产品对象的业务方法
+        LoggerFactory factory2 = (LoggerFactory) XMLUtil.getBean();
+        factory2.writeLog();
     }
 }
 
@@ -55,6 +58,11 @@ class FileLogger implements Logger
 interface LoggerFactory
 {
     Logger createLogger();
+
+    default void writeLog()
+    {
+        this.createLogger().writeLog();
+    }
 }
 
 /**
