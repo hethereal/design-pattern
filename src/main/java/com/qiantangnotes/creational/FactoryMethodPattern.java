@@ -1,13 +1,17 @@
 package com.qiantangnotes.creational;
 
+import com.qiantangnotes.util.XMLUtil;
+
 public class FactoryMethodPattern
 {
     public static void main(String[] args)
     {
         LoggerFactory factory;
         Logger logger;
-        // 可以引入配置文件和反射机制实现
-        factory = new DatabaseLoggerFactory();
+        // 普通实现
+        // factory = new DatabaseLoggerFactory();
+        // 引入配置文件和反射机制实现
+        factory = (LoggerFactory) XMLUtil.getBean();
         logger = factory.createLogger();
         logger.writeLog();
     }
