@@ -1,4 +1,4 @@
-package com.qiantangnotes.structural;
+package com.qiantangnotes.structural.proxy;
 
 /**
  * 静态代理模式

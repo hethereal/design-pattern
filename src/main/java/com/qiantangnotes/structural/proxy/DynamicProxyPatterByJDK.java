@@ -1,4 +1,4 @@
-package com.qiantangnotes.structural;
+package com.qiantangnotes.structural.proxy;
 
 import java.lang.reflect.Proxy;
 

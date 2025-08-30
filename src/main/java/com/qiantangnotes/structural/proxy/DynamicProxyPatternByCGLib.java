@@ -1,4 +1,4 @@
-package com.qiantangnotes.structural;
+package com.qiantangnotes.structural.proxy;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
